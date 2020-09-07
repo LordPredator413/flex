@@ -1,0 +1,30 @@
+.row {
+    display: flex;
+    height: 300px;
+    margin: 5px;
+    background-color: gray;
+}
+.flex-12 {
+    flex:2;
+    background-color: aqua;
+
+
+}
+
+.flex-6 {
+    flex: 1;
+    background-color: yellowgreen;
+
+
+}
+
+.flex-6, .flex-12{
+    border-width: 0.3px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 7px;
+    margin: 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
