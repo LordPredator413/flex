@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="qwer.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      </head>
+
+<div class="row">
+    <div class="flex-12-menu" id="flex-12-menus">
+        <ul>
+            <li href="#Home" class="active">Home</li>
+            <li href="#About">About</li>
+            <li href="#Blog">Blog</li>
+            <li href="#Contact">Contact</li>
+            <li href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i></li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="flex-12-2">2. 100%</div>
+</div>
+
+<div class="row">
+    <div class="flex-6">3. 50%</div>
+    <div class="flex-6">4. 50%</div>
+</div>
+
+<div class="row">
+    <div class="flex-12 ">5. 100%</div>
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("flex-12-menus");
+    if (x.className === "flex-12-menu") {
+      x.className += " responsive";
+    } else {
+      x.className = "flex-12-menu";
+    }
+  }
+</script>
+</body>
+</html>
