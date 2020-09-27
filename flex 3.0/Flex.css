@@ -1,9 +1,11 @@
+/* Styl reszty flexów */
 .row {
     display: flex;
     height: 200px;
     margin: 5px;
-    
 }
+
+/* Styl flexa z nav'em */
 .row2{
     display: flex;
     justify-content: space-around;
@@ -11,6 +13,8 @@
     height: 7vh;
     padding-bottom: 3vh;
 }
+
+/* Stylizacja napisu "NAVIK" */
 .logo{
     color: rgb(226, 226, 226);
     text-transform: uppercase;
@@ -18,6 +22,7 @@
     margin-right: 8vh;
 }
 
+/* stylizacja samego navbara */
 nav {
     flex: 2;
     display: flex;
@@ -26,19 +31,22 @@ nav {
     min-height: 8vh;
     background-color: #279AF1;
     font-family: 'Poppins', sans-serif;
-    height: 50px;
-    
-    
+    height: 50px;   
 }
 
+/* styl poszczególnych opcji nava */
 .nav-link{
     display: flex;
     justify-content: space-around;
-    width: 50%;
+    width: 40%;
 }
+
+/* usuniecie kropek z tabeli */
 .nav-link li{
     list-style: none;
 }
+
+/* styl tekstu menu */
 .nav-link a{
     color: rgb(226, 226, 226);
     text-decoration: none;
@@ -46,13 +54,23 @@ nav {
     font-size:25px;
     font-weight: bold;
     font-size: 15px;
-
-    
 }
+
+/* styl hovera każdej z opcji naszego menu */
+.nav-link li:hover{
+    background-color: #60656F;
+    transition: 1s;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+/* ukrycie burgera na dużej rozdzielczosci  */
 .burger{
     display: none;
     cursor: pointer;
 }
+
+/* stylizacja belek burgera */
 .burger div{
     width: 25px;
     height: 3px;
@@ -60,29 +78,38 @@ nav {
     margin: 5px;
 }
 
+/* efekt hover na przycisku burger */
 .burger:hover{
     background-color: #60656F;
     transition: 2s;
 }
-@media screen and (max-width:1024px) {
-    nav{
-        width: 40%;
+
+/* próba naprawy odległosci miedzy opcjami nava względem szerokosci ekranu */
+/* @media screen and (max-width:1024px) {
+    .nav-link{
+        width: 35%;
     }
 }
 @media screen and (max-width:640px) {
     .nav-link{
         width: 60%;
     }
-}
+} */
+/* media queries */
 @media screen and (max-width:640px) {
-    body{
-        overflow-x: hidden;
+
+    /* zablokowanie scrolowania w poziomie */
+    .wrapper{
+        overflow: hidden;
+        position: relative;
     }
+
+    /* opcje sidebara */
     .nav-link{
         position: absolute;
         right: 0;
         height: 50vh;
-        top: 8vh;
+        top: 6.5vh;
         background-color:  #279AF1;
         display: flex;
         flex-direction: column;
@@ -94,22 +121,25 @@ nav {
         border-top: solid;
         border-bottom: solid;
     }
+
+    /* ukrycie opcji nava */
     .nav-link li{
         opacity: 0;
 
     }
+
+    /* pokazanie sie burgera */
     .burger{
         display: block;
-        
     }
 }
 
-
-
+/* wysuniecie sie sidebara */
 .nav-active{
     transform: translateX(0%);
 }
 
+/* opcje animacji */
 @keyframes navLinkFade{
     from{
         opacity: 0;
@@ -119,31 +149,21 @@ nav {
         opacity: 1;
         transform: translateX(0px);
     }
-
 }
 
+/* Style poszczególnych flexów */
 .flex-12 {
     flex:2;
     background-color: #FFC857;
-
-
-
-
 }
 .flex-12-2 {
     flex:2;
     background-color: #C49991;
-
-
 }
-
 .flex-6 {
     flex: 1;
     background-color: #00BFB3;
-
-
 }
-
 .flex-6, .flex-12, .flex-12-2, nav{
     border-width: 4px;
     border-style: solid;
@@ -155,6 +175,3 @@ nav {
     align-items: center;
     font-size: 27px;
 }
-
-
-
