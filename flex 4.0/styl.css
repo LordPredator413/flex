@@ -1,0 +1,16 @@
+
+/* załączenie czcionki */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0B132B;
+    color:rgb(226, 226, 226);
+    font-family: 'Poppins', sans-serif;
+    transform: rotate(15deg);
+    text-transform: uppercase;
+}
+
+
