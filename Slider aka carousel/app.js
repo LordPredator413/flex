@@ -28,17 +28,42 @@ prevBtn.addEventListener('click', () => {
     carouselSlide.style.transform = 'translateX(' + (-size  * counter ) + 'px)';
 });
 
+// zapętlenie zdjec
 
-carouselSlide.addEventListener('transitionend', () =>{
-    if(carouselImages[counter].id === 'ostatnie'){
-        carouselSlide.style.transition = "none";
-        counter = carouselImages.length -2;
-        carouselSlide.style.transform = 'translateX(' + (-size  * counter ) + 'px)';
-    }
-    if(carouselImages[counter].id === 'pierwsze'){
-        carouselSlide.style.transition = "none";
-        counter = carouselImages.length -counter;
-        carouselSlide.style.transform = 'translateX(' + (-size  * counter ) + 'px)';
 
+// carouselSlide.addEventListener('transitionend', () =>{
+//     if(carouselImages[counter].id === 'ostatnie'){
+//         carouselSlide.style.transition = "none";
+//         counter = carouselImages.length -2;
+//         carouselSlide.style.transform = 'translateX(' + (-size  * counter ) + 'px)';
+//     }
+//     if(carouselImages[counter].id === 'pierwsze'){
+//         carouselSlide.style.transition = "none";
+//         counter = carouselImages.length -counter;
+//         carouselSlide.style.transform = 'translateX(' + (-size  * counter ) + 'px)';
+
+//     }
+// });
+
+const time = setInterval(() => {
+    carouselSlide.style.transition = "transform 0.8s ease-in-out";
+    counter++;
+    console.log(counter);
+    carouselSlide.style.transform = 'translateX(' + (-size  * counter ) + 'px)';
+
+    if (counter <= 6){
+        carouselSlide.addEventListener('transitionend', () =>{
+            if(carouselImages[counter].id === 'ostatnie'){
+                carouselSlide.style.transition = "none";
+                counter = carouselImages.length -2;
+                carouselSlide.style.transform = 'translateX(' + (-size  * counter ) + 'px)';
+            }
+            if(carouselImages[counter].id === 'pierwsze'){
+                carouselSlide.style.transition = "none";
+                counter = carouselImages.length -counter;
+                carouselSlide.style.transform = 'translateX(' + (-size  * counter ) + 'px)';
+        
+            }
+        });
     }
-});
+}, 1500);

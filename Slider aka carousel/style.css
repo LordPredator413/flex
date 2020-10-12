@@ -22,11 +22,13 @@ body{
     background-color: #9bf6ff;
 }
 .przyciski{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     left: 0;
+    bottom: 0;
     position: absolute;
+    
 }
 
 #nextBtn, #prevBtn{
